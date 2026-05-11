@@ -1,0 +1,50 @@
+name: pokemon_get
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #状態管理
+  flutter_riverpod: ^3.3.1
+  riverpod_annotation: ^4.0.0
+
+  # モデル生成
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.11.0
+
+  # HTTP
+  dio: ^5.9.2
+
+  # ローカルキャッシュ
+  hive_flutter: ^1.1.0
+
+  #音声再生
+  flutter_soloud: ^3.0.0
+
+  #画像キャッシュ
+  cached_network_image: ^3.4.1
+
+  # ルーティング
+  go_router: ^17.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  build_runner: ^2.5.4
+  freezed: ^3.1.0
+  json_serializable: ^6.8.0
+  riverpod_generator: ^4.0.1
+  riverpod_lint: ^3.1.1
+
+flutter:
+  uses-material-design: true
+
+
