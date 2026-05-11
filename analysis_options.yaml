@@ -1,0 +1,45 @@
+# analysis_options.yaml
+
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true        # 暗黙の dynamic キャストをエラーにする
+    strict-raw-types: true    # List や Map など型引数なしをエラーにする
+    strict-inference: true    # 型推論できない箇所をエラーにする
+
+  errors:
+    # freezed 生成ファイルの警告を抑制
+    invalid_annotation_target: ignore
+
+  exclude:
+    - "**/*.g.dart"           # json_serializable 生成ファイル
+    - "**/*.freezed.dart"     # freezed 生成ファイル
+    - "lib/generated/**"
+
+linter:
+  rules:
+    # ── 非同期 ──────────────────────────────────────
+    unawaited_futures: true          # await 忘れを検出（AudioPlayer.dispose など）
+    avoid_void_async: true           # void な async 関数を禁止
+    cancel_subscriptions: true       # StreamSubscription の cancel 忘れを検出
+
+
+    # ── null safety ──────────────────────────────────
+    prefer_null_aware_operators: true   # x == null ? y : x → x ?? y
+    unnecessary_null_checks: true
+
+    # ── 型・可読性 ───────────────────────────────────
+    always_use_package_imports: true    # 相対 import を禁止、パス統一
+    prefer_final_locals: true           # 再代入しない変数は final に
+    prefer_const_constructors: true     # Widget は const を積極使用
+    prefer_const_literals_to_create_immutables: true
+    avoid_dynamic_calls: true           # dynamic.someMethod() を禁止
+
+    # ── エラーハンドリング ────────────────────────────
+    only_throw_errors: true             # String などを throw するのを禁止
+    use_rethrow_when_possible: true     # catch (e) { throw e; } → rethrow
+
+    # ── 不要コード検出 ───────────────────────────────
+    unnecessary_lambdas: true           # (x) => foo(x) → foo を推奨
+    avoid_redundant_argument_values: true
