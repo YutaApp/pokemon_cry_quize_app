@@ -15,7 +15,6 @@ class PokeApiService {
 
   final Dio _dio;
 
-  static const _baseUrl = 'https://pokeapi.co/api/v2';
   static const _jaLanguage = 'ja';
 
   // ─────────────────────────────────────────────
@@ -32,9 +31,7 @@ class PokeApiService {
     required int limit,
     int offset = 0,
   }) async {
-    final response = await _get(
-      '$_baseUrl/pokemon?limit=$limit&offset=$offset',
-    );
+    final response = await _get('/pokemon?limit=$limit&offset=$offset');
     final list = PokemonListResponse.fromJson(response);
     return list.results.map((r) => r.idFromUrl).toList();
   }
@@ -54,8 +51,8 @@ class PokeApiService {
   Future<PokemonQuizItem> _fetchSingleItem(int id) async {
     // pokemon と pokemon-species を並列取得
     final results = await Future.wait([
-      _get('$_baseUrl/pokemon/$id'),
-      _get('$_baseUrl/pokemon-species/$id'),
+      _get('/pokemon/$id'),
+      _get('/pokemon-species/$id'),
     ]);
 
     final pokemon = PokemonResponse.fromJson(results[0]);
