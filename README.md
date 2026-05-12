@@ -9,7 +9,7 @@ PokeAPI の鳴き声データを使った Flutter 製のクイズアプリです
 
 ```
 [ホーム画面]
-<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 18" src="https://github.com/user-attachments/assets/0e54c776-eab6-449a-9796-e37b4ba08e0d" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 18" src="https://github.com/user-attachments/assets/b5e626a6-571a-4e4d-a230-0c19b3ec0d5b" />
 
 [クイズ画面]
 <img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 23" src="https://github.com/user-attachments/assets/89b8cd64-c816-4a62-8c36-cd384b9e06bc" />
