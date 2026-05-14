@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/quiz_provider.dart';
-import 'package:pokemon_get/features/pokemon/presentation/screens/result_screen.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/answer_button.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/cry_player.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/pokemon_sprite.dart';
