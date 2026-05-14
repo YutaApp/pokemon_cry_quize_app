@@ -7,10 +7,16 @@ PokeAPI の鳴き声データを使った Flutter 製のクイズアプリです
 
 ## スクリーンショット
 
-> ※ 画像は後で差し替えてください
-
 ```
-[ホーム画面]   [クイズ画面]   [リザルト画面]
+[ホーム画面]
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 18" src="https://github.com/user-attachments/assets/b5e626a6-571a-4e4d-a230-0c19b3ec0d5b" />
+
+[クイズ画面]
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 23" src="https://github.com/user-attachments/assets/89b8cd64-c816-4a62-8c36-cd384b9e06bc" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 26" src="https://github.com/user-attachments/assets/e6a715b7-0d2c-4c72-bc70-826e38ec0788" />
+
+[リザルト画面]
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2026-05-12 at 18 07 44" src="https://github.com/user-attachments/assets/1c243179-addf-48bc-b3bb-33f6143b02ad" />
 ```
 
 ---
@@ -33,9 +39,9 @@ PokeAPI の鳴き声データを使った Flutter 製のクイズアプリです
 |---|---|
 | 状態管理 | [flutter_riverpod](https://pub.dev/packages/flutter_riverpod) + [riverpod_annotation](https://pub.dev/packages/riverpod_annotation) |
 | モデル生成 | [freezed](https://pub.dev/packages/freezed) + [json_serializable](https://pub.dev/packages/json_serializable) |
-| HTTP | [http](https://pub.dev/packages/http) |
+| HTTP | [dio](https://pub.dev/packages/dio) |
 | ローカルキャッシュ | [hive_flutter](https://pub.dev/packages/hive_flutter) |
-| 音声再生 | [just_audio](https://pub.dev/packages/just_audio) |
+| 音声再生 | [ flutter_soloud](https://pub.dev/packages/flutter_soloud) |
 | 画像キャッシュ | [cached_network_image](https://pub.dev/packages/cached_network_image) |
 | データソース | [PokeAPI v2](https://pokeapi.co/) |
 
@@ -109,7 +115,7 @@ UI (Screen)
 ### インストール
 
 ```bash
-git clone https://github.com/<your-username>/pokemon_cry_quiz.git
+git clone https://github.com/YutaApp/pokemon_cry_quiz.git
 cd pokemon_cry_quiz
 
 # 依存パッケージを取得
