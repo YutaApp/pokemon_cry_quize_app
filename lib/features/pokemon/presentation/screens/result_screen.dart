@@ -5,7 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokemon_get/features/pokemon/domain/entities/quiz_result.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/quiz_provider.dart';
-import 'package:pokemon_get/features/pokemon/presentation/screens/home_screen.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/pokemon_sprite.dart';
 import 'package:pokemon_get/router/app_router.dart';
 

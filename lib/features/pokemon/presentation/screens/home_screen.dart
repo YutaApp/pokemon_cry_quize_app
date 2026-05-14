@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import 'package:pokemon_get/features/pokemon/domain/entities/pokemon_generation.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/providers.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/quiz_provider.dart';
-import 'package:pokemon_get/features/pokemon/presentation/screens/quiz_screen.dart';
 import 'package:pokemon_get/router/app_router.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
