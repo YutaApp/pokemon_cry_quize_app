@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pokemon_get/features/pokemon/domain/entities/quiz_result.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/quiz_provider.dart';
 import 'package:pokemon_get/features/pokemon/presentation/screens/home_screen.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/pokemon_sprite.dart';
+import 'package:pokemon_get/router/app_router.dart';
 
 class ResultScreen extends ConsumerWidget {
   const ResultScreen({super.key});
@@ -106,16 +108,13 @@ class ResultScreen extends ConsumerWidget {
               FilledButton(
                 onPressed: () async {
                   await ref.read(quizProvider.notifier).restart();
-                  if (context.mounted) Navigator.of(context).pop();
+                  if (context.mounted) context.go(AppRoute.quiz);
                 },
                 child: const Text('もう一度'),
               ),
               const SizedBox(height: 8),
               OutlinedButton(
-                onPressed: () => Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute<void>(builder: (_) => const HomeScreen()),
-                  (_) => false,
-                ),
+                onPressed: () => context.go(AppRoute.home),
                 child: const Text('ホームへ'),
               ),
             ],

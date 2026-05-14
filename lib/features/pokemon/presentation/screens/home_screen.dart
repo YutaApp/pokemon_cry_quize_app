@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pokemon_get/features/pokemon/domain/entities/pokemon_generation.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/providers.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/quiz_provider.dart';
 import 'package:pokemon_get/features/pokemon/presentation/screens/quiz_screen.dart';
+import 'package:pokemon_get/router/app_router.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -174,10 +176,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       generation: _generation,
     );
     await ref.read(quizProvider.notifier).startQuiz(config);
-
     if (!mounted) return;
-    await Navigator.of(
-      context,
-    ).push(MaterialPageRoute<void>(builder: (_) => const QuizScreen()));
+    await context.push(AppRoute.quiz);
   }
 }

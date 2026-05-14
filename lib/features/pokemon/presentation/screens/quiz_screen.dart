@@ -2,12 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pokemon_get/features/pokemon/presentation/providers/quiz_provider.dart';
 import 'package:pokemon_get/features/pokemon/presentation/screens/result_screen.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/answer_button.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/cry_player.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/pokemon_sprite.dart';
 import 'package:pokemon_get/features/pokemon/presentation/widgets/timer_bar.dart';
+import 'package:pokemon_get/router/app_router.dart';
 
 class QuizScreen extends ConsumerStatefulWidget {
   const QuizScreen({super.key});
@@ -73,9 +75,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           // 全問終了 → リザルト画面へ遷移
           WidgetsBinding.instance.addPostFrameCallback((_) {
             if (!mounted) return;
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute<void>(builder: (_) => const ResultScreen()),
-            );
+            context.pushReplacement(AppRoute.result);
           });
           return const Scaffold(
             body: Center(child: CircularProgressIndicator()),
