@@ -7,21 +7,23 @@ PokeAPI の鳴き声データを使った Flutter 製のクイズアプリです
 
 ## スクリーンショット
 
-> ※ 画像は後で差し替えてください
-
-```
 [ホーム画面]
+
 ![screenshot](https://github.com/user-attachments/assets/6433a9a2-9c78-4d07-ba01-016bb0870560)
 
 
 [クイズ画面]
+
 ![screenshot](https://github.com/user-attachments/assets/e5033129-b094-4a34-a575-8b6f0bd68714)
+
+![screenshot](https://github.com/user-attachments/assets/5c491fe9-102b-4c91-8244-a6474bc17c33)
 
 
 [リザルト画面]
-![screenshot](https://github.com/user-attachments/assets/5c491fe9-102b-4c91-8244-a6474bc17c33)
 
-```
+![screenshot](https://github.com/user-attachments/assets/b8215d56-a917-4182-9b2d-6d00d087e0c1)
+
+
 
 ---
 
